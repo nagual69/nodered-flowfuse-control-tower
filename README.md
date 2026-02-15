@@ -112,6 +112,7 @@ Before starting Phase 5, ensure you have:
 
 - **[docs/project_plan.md](docs/project_plan.md)** - Phase 5-6 implementation roadmap
 - **[docs/MIGRATION_STRATEGY.md](docs/MIGRATION_STRATEGY.md)** - Standalone → FlowFuse migration assessment
+- **[docs/CLUSTERING_AND_REDEPLOYMENT.md](docs/CLUSTERING_AND_REDEPLOYMENT.md)** - Clustering and redeployment strategy for high availability
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** - Control Tower architecture (to be created)
 - **[docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md)** - FlowFuse setup instructions (to be created)
 - **[docs/GOVERNANCE_GUIDE.md](docs/GOVERNANCE_GUIDE.md)** - RBAC, policies, audit logging (to be created)
