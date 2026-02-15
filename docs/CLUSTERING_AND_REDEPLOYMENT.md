@@ -1,8 +1,64 @@
-# Node-RED Clustering & Zero-Downtime Redeployment Architecture
+# Zero-Downtime Deployment for Node-RED Agentic AI Workflows
+## Orchestrated by RedForge AI Control Tower
 
-> **Status**: Assessment Complete | **Version**: 1.0 | **Date**: 2026-02-14
+> **Status**: Assessment Complete | **Version**: 2.0 | **Date**: 2026-02-15
 >
-> This document provides an architectural assessment for clustering Node-RED instances and achieving zero-downtime flow redeployment with full state preservation. It targets the Gen 3 / Control Tower phase of RedForge Agentic AI.
+> This document describes the technical architecture for zero-downtime deployments of Node-RED agent flows, orchestrated by the RedForge AI Control Tower (TypeScript management application).
+
+---
+
+## Overview
+
+The **RedForge AI Control Tower** orchestrates zero-downtime deployments for Node-RED instances running AI agent flows. This document describes the technical architecture for updating agent flows (prompts, models, logic) without dropping active inference requests.
+
+### What Gets Deployed?
+
+**Node-RED Flow JSON Files (Agent Primitives):**
+- `generate-embeddings-ollama.json` → Updated embedding model or chunk size
+- `query-processing.json` → Improved retrieval algorithm
+- `response-generation.json` → Better prompt engineering
+- Any of the 8 agent primitive flows from the main [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI) project
+
+**Control Tower Orchestration:**
+- Manages deployment phases: DRAIN → DEPLOY → VERIFY → RESUME → AUDIT → CLEANUP
+- Coordinates Redis state preservation (voting results, conversation history)
+- Controls MQTT message buffering (queues incoming tasks during deployment)
+- Monitors health and triggers rollback if verification fails
+
+### Architecture: Control Tower + Node-RED Instances
+
+```
+┌─Control Tower (TypeScript Management App)──────────────────┐
+│  Deployment Orchestrator Service                            │
+│  • Signals DRAIN to old instance (blue)                    │
+│  • Deploys flows to new instance (green)                   │
+│  • Runs smoke tests (health, connectivity, sample workflow) │
+│  • Signals RESUME (routes traffic to green)                │
+│  • Cleans up old instance (destroys blue)                  │
+└─────────────────────────────────────────────────────────────┘
+                    │ Orchestrates ↓
+┌─Node-RED Instances (Agent Runtimes)─────────────────────────┐
+│  Blue Instance (v1.0)  →  Green Instance (v1.1)            │
+│  • Redis shared state (voting results, conversation history)│
+│  • MQTT message buffering (hold queue during deployment)    │
+│  • Checkpoint/replay support (resume long-running workflows)│
+└─────────────────────────────────────────────────────────────┘
+                    │ Shared Infrastructure ↓
+┌─Shared Services─────────────────────────────────────────────┐
+│  • Redis (multi-agent coordination state)                   │
+│  • MQTT (message buffering + task distribution)             │
+│  • PostgreSQL (workflow checkpoints + audit logs)           │
+│  • Ollama (LLM inference)                                   │
+│  • Milvus/pgvector (vector database)                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Key Benefits
+
+- **Zero Message Loss:** All in-flight requests preserved via MQTT buffering + Redis state
+- **Zero Downtime:** Blue-green deployment ensures traffic always routed to healthy instance
+- **Automatic Rollback:** Failed deployments automatically rolled back to blue instance
+- **Audit Trail:** Complete deployment history (duration, messages held, success/failure)
 
 ---
 
