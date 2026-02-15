@@ -1,17 +1,14 @@
-# FlowFuse Control Tower Migration Assessment
+# RedForge Control Tower Migration Assessment
 
-**Version**: 1.0
-**Date**: January 2026
+**Version**: 1.1
+**Date**: February 2026
 **Status**: Planning Phase
 
 ---
 
 ## Executive Summary
 
-This document assesses the impact of migrating from **standalone Node-RED** to a **FlowFuse-managed AI Control Tower** architecture, as defined in the architectural specifications:
-
-- `docs/Node-RED Agentic Workflows for Copilot.rtf` - Micro-level workflow design patterns
-- `docs/Node-RED AI Control Tower Architecture.rtf` - Macro-level fleet management architecture
+This document assesses the impact of migrating from **standalone Node-RED** to a **FlowFuse-managed AI Control Tower** architecture, as defined in the architectural specifications for RedForge-Agentic-AI.
 
 ### Key Findings
 
@@ -63,7 +60,7 @@ This document assesses the impact of migrating from **standalone Node-RED** to a
 
 ---
 
-### Target State (FlowFuse AI Control Tower)
+### Target State (RedForge AI Control Tower)
 
 ```
 ┌───────────────────────────────────────────────────────────────────┐
@@ -440,7 +437,7 @@ Deploy centralized orchestration:
 
 ## Conclusion
 
-The FlowFuse Control Tower migration represents a **major architectural evolution** from standalone Node-RED to enterprise-grade fleet management. Key takeaways:
+The RedForge Control Tower migration represents a **major architectural evolution** from standalone Node-RED to enterprise-grade fleet management. Key takeaways:
 
 1. **Compatibility**: Current primitives are fully compatible with FlowFuse (minimal code changes)
 2. **Value**: Significant enterprise benefits (RBAC, HA, scalability, observability)
@@ -453,4 +450,6 @@ The FlowFuse Control Tower migration represents a **major architectural evolutio
 3. Go/No-Go decision (review pilot results)
 4. Execute Phase 5 roadmap (if approved)
 
-**See**: `docs/project_plan.md` Phase 5 for detailed implementation plan.
+**See**: 
+- `docs/project_plan.md` Phase 5 for detailed implementation plan
+- `docs/CLUSTERING_AND_REDEPLOYMENT.md` for zero-downtime deployment architecture and clustering strategy

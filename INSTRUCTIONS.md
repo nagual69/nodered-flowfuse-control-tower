@@ -1,9 +1,9 @@
 # Control Tower Repository Setup Instructions
 
-**Purpose**: This directory contains all files needed to initialize the **nodered-flowfuse-control-tower** repository.
+**Purpose**: This directory contains all files needed to initialize the **RedForge-AI-Control-Tower** repository.
 
 **Status**: Ready to copy to new repository
-**Last Updated**: 2026-01-17
+**Last Updated**: 2026-02-15
 
 ---
 
@@ -11,10 +11,10 @@
 
 ```powershell
 # Step 1: Navigate to Control Tower repository
-cd D:\development\nodered-flowfuse-control-tower
+cd D:\development\RedForge-AI-Control-Tower
 
 # Step 2: Copy all files from staging directory
-Copy-Item -Path "D:\development\nodered-ollama-milvus-rag\docs\control-tower-export\*" -Destination "." -Recurse -Force
+Copy-Item -Path "D:\development\RedForge-Agentic-AI\docs\control-tower-export\*" -Destination "." -Recurse -Force
 
 # Step 3: Review files
 ls -Recurse
@@ -28,8 +28,8 @@ git commit -m "Initial Control Tower project setup
 - Add migration strategy (MIGRATION_STRATEGY.md)
 - Add placeholder ARCHITECTURE.md
 
-This project implements Gen 3 (FlowFuse Control Tower) for enterprise fleet management
-of the multi-agent primitives from nodered-ollama-milvus-rag (Gen 2).
+This project implements Gen 3 (RedForge Control Tower) for enterprise fleet management
+of the multi-agent primitives from RedForge-Agentic-AI (Gen 2).
 
 Prerequisites: Requires Gen 2 multi-agent architecture (Phase 4) to be stable.
 
@@ -64,13 +64,13 @@ docs/
 ### Step 1: Navigate to Control Tower Repository
 
 ```powershell
-cd D:\development\nodered-flowfuse-control-tower
+cd D:\development\RedForge-AI-Control-Tower
 ```
 
 Verify you're in the correct directory:
 ```powershell
 git remote -v
-# Should show: nagual69/nodered-flowfuse-control-tower
+# Should show: nagual69/RedForge-AI-Control-Tower
 ```
 
 ---
@@ -80,16 +80,16 @@ git remote -v
 **Option A: Copy All Files (Recommended)**
 ```powershell
 # Copy everything from staging directory
-Copy-Item -Path "D:\development\nodered-ollama-milvus-rag\docs\control-tower-export\*" -Destination "." -Recurse -Force
+Copy-Item -Path "D:\development\RedForge-Agentic-AI\docs\control-tower-export\*" -Destination "." -Recurse -Force
 ```
 
 **Option B: Copy Selectively**
 ```powershell
 # Copy README to root
-Copy-Item -Path "D:\development\nodered-ollama-milvus-rag\docs\control-tower-export\README.md" -Destination "."
+Copy-Item -Path "D:\development\RedForge-Agentic-AI\docs\control-tower-export\README.md" -Destination "."
 
 # Copy docs directory
-Copy-Item -Path "D:\development\nodered-ollama-milvus-rag\docs\control-tower-export\docs" -Destination "." -Recurse
+Copy-Item -Path "D:\development\RedForge-Agentic-AI\docs\control-tower-export\docs" -Destination "." -Recurse
 ```
 
 **Note**: Do NOT copy `INSTRUCTIONS.md` to the Control Tower repo (it's for reference only).
@@ -101,7 +101,7 @@ Copy-Item -Path "D:\development\nodered-ollama-milvus-rag\docs\control-tower-exp
 After copying, your Control Tower repo should have:
 
 ```
-nodered-flowfuse-control-tower/
+RedForge-AI-Control-Tower/
 ├── .git/
 ├── README.md                  # ✅ Copied from staging
 └── docs/
@@ -124,7 +124,7 @@ Before committing, review the files to ensure they make sense:
 
 1. **README.md**
    - Check project description
-   - Verify GitHub links (should point to `nagual69/nodered-flowfuse-control-tower`)
+   - Verify GitHub links (should point to `nagual69/RedForge-AI-Control-Tower`)
    - Confirm status is "Planning Phase - NOT STARTED"
 
 2. **docs/project_plan.md**
@@ -158,8 +158,8 @@ git commit -m "Initial Control Tower project setup
 - Add migration strategy (MIGRATION_STRATEGY.md)
 - Add placeholder ARCHITECTURE.md
 
-This project implements Gen 3 (FlowFuse Control Tower) for enterprise fleet management
-of the multi-agent primitives from nodered-ollama-milvus-rag (Gen 2).
+This project implements Gen 3 (RedForge Control Tower) for enterprise fleet management
+of the multi-agent primitives from RedForge-Agentic-AI (Gen 2).
 
 Prerequisites: Requires Gen 2 multi-agent architecture (Phase 4) to be stable.
 
@@ -175,7 +175,7 @@ Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
 git push origin main
 
 # Verify on GitHub
-# Open: https://github.com/nagual69/nodered-flowfuse-control-tower
+# Open: https://github.com/nagual69/RedForge-AI-Control-Tower
 ```
 
 ---
@@ -208,7 +208,7 @@ git push origin main
 
 ### Update GitHub Repository Settings
 
-1. **Description**: "FlowFuse AI Control Tower for managing distributed multi-agent Node-RED workflows"
+1. **Description**: "RedForge AI Control Tower for managing distributed multi-agent Node-RED workflows"
 2. **Topics**: `node-red`, `flowfuse`, `ai`, `rag`, `multi-agent`, `fleet-management`, `control-tower`, `enterprise`
 3. **Website**: (optional) Link to main project or documentation
 4. **Disable Issues**: Leave enabled for planning discussions
@@ -244,7 +244,7 @@ Add forward reference after "Multi-Agent Workflows (Gen 2)" section:
 ```markdown
 ### Enterprise Fleet Management (Gen 3 - Separate Project)
 
-For enterprise deployments requiring distributed Node-RED instances, centralized governance, and fleet-wide observability, see the **[NodeRed-FlowFuse-Control-Tower](https://github.com/nagual69/nodered-flowfuse-control-tower)** project.
+For enterprise deployments requiring distributed Node-RED instances, centralized governance, and fleet-wide observability, see the **[RedForge-AI-Control-Tower](https://github.com/nagual69/RedForge-AI-Control-Tower)** project.
 
 **Prerequisites**: Requires Gen 2 multi-agent primitives (Phase 4) to be stable and validated.
 ```
@@ -257,7 +257,7 @@ After successfully pushing to the Control Tower repo, you can optionally remove 
 
 ```powershell
 # Navigate to main project
-cd D:\development\nodered-ollama-milvus-rag
+cd D:\development\RedForge-Agentic-AI
 
 # Remove staging directory (CAREFUL - this is permanent!)
 Remove-Item -Path "docs\control-tower-export" -Recurse -Force
@@ -320,8 +320,8 @@ After the Control Tower repository is set up:
 ## Questions?
 
 For questions about:
-- **Control Tower project**: Open issue in [nodered-flowfuse-control-tower](https://github.com/nagual69/nodered-flowfuse-control-tower/issues)
-- **Main project (Gen 2)**: Open issue in [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag/issues)
+- **Control Tower project**: Open issue in [RedForge-AI-Control-Tower](https://github.com/nagual69/RedForge-AI-Control-Tower/issues)
+- **Main project (Gen 2)**: Open issue in [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI/issues)
 - **FlowFuse platform**: See [FlowFuse Documentation](https://flowfuse.com/docs/)
 
 ---

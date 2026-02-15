@@ -1,17 +1,17 @@
-# FlowFuse AI Control Tower - Project Plan
+# RedForge AI Control Tower - Project Plan
 
-**Project**: FlowFuse AI Control Tower for Multi-Agent Node-RED Workflows
-**Repository**: [nodered-flowfuse-control-tower](https://github.com/nagual69/nodered-flowfuse-control-tower)
+**Project**: RedForge AI Control Tower for Multi-Agent Node-RED Workflows
+**Repository**: [RedForge-AI-Control-Tower](https://github.com/nagual69/RedForge-AI-Control-Tower)
 **Status**: 🚧 Planning Phase - NOT STARTED
-**Last Updated**: 2026-01-17
+**Last Updated**: 2026-02-15
 
 ---
 
 ## Overview
 
-This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolution: enterprise-grade fleet management and governance for distributed multi-agent Node-RED workflows.
+This project implements **Generation 3** of the RedForge-Agentic-AI evolution: enterprise-grade fleet management and governance for distributed multi-agent Node-RED workflows.
 
-**Prerequisites**: This project requires the completion of **Phase 4** from the main [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag) project, specifically:
+**Prerequisites**: This project requires the completion of **Phase 4** from the main [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI) project, specifically:
 - ✅ Gen 1: Production RAG pipeline (complete)
 - ✅ Gen 2: Multi-agent architecture with 24 agent flows and coordination patterns (must be stable)
 - ✅ Performance benchmarks showing multi-agent benefits validated
@@ -31,7 +31,7 @@ This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolut
 **Vision**: Transition from standalone Node-RED to FlowFuse-managed fleet with centralized AI Control Tower for enterprise-grade governance and observability.
 
 **Architectural References**:
-- Main Project: [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag)
+- Main Project: [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI)
 - `docs/MIGRATION_STRATEGY.md` - Migration assessment from standalone to FlowFuse
 - `docs/ARCHITECTURE.md` - Control Tower architecture design (to be created)
 - `docs/Node-RED Agentic Workflows for Copilot.rtf` - Modular workflow design patterns (from main project)
@@ -79,6 +79,13 @@ This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolut
 
 **Success Criteria**: All primitives running on FlowFuse instances, communication verified
 
+**Zero-Downtime Deployment Implementation**: See [CLUSTERING_AND_REDEPLOYMENT.md](CLUSTERING_AND_REDEPLOYMENT.md) for detailed architecture on:
+- Blue-Green deployment strategy for zero-downtime updates
+- Message buffering via MQTT hold queues
+- State preservation using Redis context stores
+- Checkpoint/replay mechanisms for in-flight messages
+- Deploy orchestration scripts and verification procedures
+
 #### 5.3 Central Control Tower Implementation (Weeks 5-7)
 
 **Central Orchestrator Instance:**
@@ -109,10 +116,18 @@ This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolut
   - [ ] `control-tower-query-coordinator.json` - Load-balance queries across instances
   - [ ] `control-tower-health-monitor.json` - Poll instance health, trigger alerts
   - [ ] `control-tower-resource-manager.json` - Scale instances based on load
+  - [ ] `control-tower-deploy-orchestrator.json` - **NEW**: Orchestrate zero-downtime deploys (see CLUSTERING_AND_REDEPLOYMENT.md §4.7)
 - [ ] Configure inter-instance messaging:
   - [ ] MQTT broker for async task distribution
   - [ ] REST API endpoints for synchronous coordination
   - [ ] WebSocket for real-time dashboard updates
+  - [ ] Redis Pub/Sub for deploy signaling (drain/resume events)
+- [ ] **Deploy Management Dashboard** (see CLUSTERING_AND_REDEPLOYMENT.md Enhancement 2):
+  - [ ] Deploy initiation interface with confirmation dialogs
+  - [ ] Real-time phase progress (DRAIN → DEPLOY → VERIFY → RESUME → AUDIT)
+  - [ ] Metrics display (messages held, in-flight count, checkpoints)
+  - [ ] Rollback controls
+  - [ ] Deploy history and audit trail
 
 **Edge Agent Instances:**
 - [ ] Deploy edge instances (if hybrid cloud-edge architecture):
@@ -357,6 +372,7 @@ This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolut
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.1.1 | 2026-02-15 | Updated repository name to RedForge-AI-Control-Tower and main project to RedForge-Agentic-AI |
 | 0.1.0 | 2026-01-17 | Initial Control Tower project plan (extracted from main project Phase 5-6) |
 
 ---
@@ -364,12 +380,13 @@ This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolut
 ## Related Documentation
 
 **Main Project (Gen 1 + Gen 2)**:
-- [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag)
+- [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI)
 - Main Project Phases 1-4 (standalone Node-RED deployment)
 
 **This Project (Gen 3)**:
 - `docs/MIGRATION_STRATEGY.md` - Standalone → FlowFuse migration assessment
 - `docs/ARCHITECTURE.md` - Control Tower architecture (to be created)
+- `docs/CLUSTERING_AND_REDEPLOYMENT.md` - Zero-downtime deployment and clustering strategy
 - `docs/DEPLOYMENT_GUIDE.md` - FlowFuse setup instructions (to be created)
 - `docs/GOVERNANCE_GUIDE.md` - RBAC, policies, audit logging (to be created)
 - `docs/OBSERVABILITY_GUIDE.md` - Fleet monitoring guide (to be created)
