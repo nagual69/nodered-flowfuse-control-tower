@@ -1183,8 +1183,16 @@ ORDER BY created_at ASC;
 
 ## Related Documents
 
-- [Architecture Overview](ARCHITECTURE.md) -- System design
-- [Multi-Agent Architecture](MULTI_AGENT_ARCHITECTURE.md) -- Phase 4 agent patterns
-- [Error Codes Reference](../reference/ERROR_CODES.md) -- Error taxonomy
-- [E2E Testing Guide](../guides/E2E_TESTING.md) -- Manual test procedures
-- [Agent Team Guide](../guides/AGENT_TEAM_GUIDE.md) -- Multi-agent patterns
+**RedForge-AI-Control-Tower Documentation**:
+- [README](../README.md) -- Project overview and status
+- [Architecture Overview](ARCHITECTURE.md) -- Control Tower system design
+- [Project Plan](project_plan.md) -- Phase 5-6 implementation roadmap
+- [Migration Strategy](MIGRATION_STRATEGY.md) -- Standalone to FlowFuse migration assessment
+- [Clustering Review](CLUSTERING_REVIEW.md) -- Technical vetting of this document
+
+**RedForge-Agentic-AI Documentation** (Main Project):
+- [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI) -- Multi-agent RAG system (Gen 2)
+- Multi-Agent Architecture -- Phase 4 agent patterns
+- Error Codes Reference -- Error taxonomy
+- E2E Testing Guide -- Manual test procedures
+- Agent Team Guide -- Multi-agent patterns

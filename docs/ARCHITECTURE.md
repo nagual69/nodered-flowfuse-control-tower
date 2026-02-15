@@ -134,6 +134,7 @@ The following architectural decisions will be documented during Phase 5:
 - [README.md](../README.md) - Project overview and status
 - [project_plan.md](project_plan.md) - Phase 5-6 roadmap
 - [MIGRATION_STRATEGY.md](MIGRATION_STRATEGY.md) - Migration assessment from standalone to FlowFuse
+- [CLUSTERING_AND_REDEPLOYMENT.md](CLUSTERING_AND_REDEPLOYMENT.md) - Zero-downtime deployment and clustering architecture
 
 **Architecture Source Materials**:
 - `docs/Node-RED AI Control Tower Architecture.rtf` (main project) - To be converted

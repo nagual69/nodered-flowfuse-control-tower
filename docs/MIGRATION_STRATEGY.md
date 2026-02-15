@@ -450,4 +450,6 @@ The RedForge Control Tower migration represents a **major architectural evolutio
 3. Go/No-Go decision (review pilot results)
 4. Execute Phase 5 roadmap (if approved)
 
-**See**: `docs/project_plan.md` Phase 5 for detailed implementation plan.
+**See**: 
+- `docs/project_plan.md` Phase 5 for detailed implementation plan
+- `docs/CLUSTERING_AND_REDEPLOYMENT.md` for zero-downtime deployment architecture and clustering strategy

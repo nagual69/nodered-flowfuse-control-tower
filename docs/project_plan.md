@@ -79,6 +79,13 @@ This project implements **Generation 3** of the RedForge-Agentic-AI evolution: e
 
 **Success Criteria**: All primitives running on FlowFuse instances, communication verified
 
+**Zero-Downtime Deployment Implementation**: See [CLUSTERING_AND_REDEPLOYMENT.md](CLUSTERING_AND_REDEPLOYMENT.md) for detailed architecture on:
+- Blue-Green deployment strategy for zero-downtime updates
+- Message buffering via MQTT hold queues
+- State preservation using Redis context stores
+- Checkpoint/replay mechanisms for in-flight messages
+- Deploy orchestration scripts and verification procedures
+
 #### 5.3 Central Control Tower Implementation (Weeks 5-7)
 
 **Central Orchestrator Instance:**
@@ -109,10 +116,18 @@ This project implements **Generation 3** of the RedForge-Agentic-AI evolution: e
   - [ ] `control-tower-query-coordinator.json` - Load-balance queries across instances
   - [ ] `control-tower-health-monitor.json` - Poll instance health, trigger alerts
   - [ ] `control-tower-resource-manager.json` - Scale instances based on load
+  - [ ] `control-tower-deploy-orchestrator.json` - **NEW**: Orchestrate zero-downtime deploys (see CLUSTERING_AND_REDEPLOYMENT.md §4.7)
 - [ ] Configure inter-instance messaging:
   - [ ] MQTT broker for async task distribution
   - [ ] REST API endpoints for synchronous coordination
   - [ ] WebSocket for real-time dashboard updates
+  - [ ] Redis Pub/Sub for deploy signaling (drain/resume events)
+- [ ] **Deploy Management Dashboard** (see CLUSTERING_AND_REDEPLOYMENT.md Enhancement 2):
+  - [ ] Deploy initiation interface with confirmation dialogs
+  - [ ] Real-time phase progress (DRAIN → DEPLOY → VERIFY → RESUME → AUDIT)
+  - [ ] Metrics display (messages held, in-flight count, checkpoints)
+  - [ ] Rollback controls
+  - [ ] Deploy history and audit trail
 
 **Edge Agent Instances:**
 - [ ] Deploy edge instances (if hybrid cloud-edge architecture):
@@ -371,6 +386,7 @@ This project implements **Generation 3** of the RedForge-Agentic-AI evolution: e
 **This Project (Gen 3)**:
 - `docs/MIGRATION_STRATEGY.md` - Standalone → FlowFuse migration assessment
 - `docs/ARCHITECTURE.md` - Control Tower architecture (to be created)
+- `docs/CLUSTERING_AND_REDEPLOYMENT.md` - Zero-downtime deployment and clustering strategy
 - `docs/DEPLOYMENT_GUIDE.md` - FlowFuse setup instructions (to be created)
 - `docs/GOVERNANCE_GUIDE.md` - RBAC, policies, audit logging (to be created)
 - `docs/OBSERVABILITY_GUIDE.md` - Fleet monitoring guide (to be created)
