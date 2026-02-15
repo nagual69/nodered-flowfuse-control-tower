@@ -1,17 +1,17 @@
-# FlowFuse AI Control Tower - Project Plan
+# RedForge AI Control Tower - Project Plan
 
-**Project**: FlowFuse AI Control Tower for Multi-Agent Node-RED Workflows
-**Repository**: [nodered-flowfuse-control-tower](https://github.com/nagual69/nodered-flowfuse-control-tower)
+**Project**: RedForge AI Control Tower for Multi-Agent Node-RED Workflows
+**Repository**: [RedForge-AI-Control-Tower](https://github.com/nagual69/RedForge-AI-Control-Tower)
 **Status**: 🚧 Planning Phase - NOT STARTED
-**Last Updated**: 2026-01-17
+**Last Updated**: 2026-02-15
 
 ---
 
 ## Overview
 
-This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolution: enterprise-grade fleet management and governance for distributed multi-agent Node-RED workflows.
+This project implements **Generation 3** of the RedForge-Agentic-AI evolution: enterprise-grade fleet management and governance for distributed multi-agent Node-RED workflows.
 
-**Prerequisites**: This project requires the completion of **Phase 4** from the main [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag) project, specifically:
+**Prerequisites**: This project requires the completion of **Phase 4** from the main [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI) project, specifically:
 - ✅ Gen 1: Production RAG pipeline (complete)
 - ✅ Gen 2: Multi-agent architecture with 24 agent flows and coordination patterns (must be stable)
 - ✅ Performance benchmarks showing multi-agent benefits validated
@@ -31,7 +31,7 @@ This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolut
 **Vision**: Transition from standalone Node-RED to FlowFuse-managed fleet with centralized AI Control Tower for enterprise-grade governance and observability.
 
 **Architectural References**:
-- Main Project: [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag)
+- Main Project: [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI)
 - `docs/MIGRATION_STRATEGY.md` - Migration assessment from standalone to FlowFuse
 - `docs/ARCHITECTURE.md` - Control Tower architecture design (to be created)
 - `docs/Node-RED Agentic Workflows for Copilot.rtf` - Modular workflow design patterns (from main project)
@@ -357,6 +357,7 @@ This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolut
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.1.1 | 2026-02-15 | Updated repository name to RedForge-AI-Control-Tower and main project to RedForge-Agentic-AI |
 | 0.1.0 | 2026-01-17 | Initial Control Tower project plan (extracted from main project Phase 5-6) |
 
 ---
@@ -364,7 +365,7 @@ This project implements **Generation 3** of the NodeRed-Ollama-Milvus-RAG evolut
 ## Related Documentation
 
 **Main Project (Gen 1 + Gen 2)**:
-- [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag)
+- [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI)
 - Main Project Phases 1-4 (standalone Node-RED deployment)
 
 **This Project (Gen 3)**:

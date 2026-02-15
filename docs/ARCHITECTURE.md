@@ -1,13 +1,13 @@
-# FlowFuse AI Control Tower - Architecture
+# RedForge AI Control Tower - Architecture
 
 **Status**: 🚧 Planning Phase - Architecture Design In Progress
-**Last Updated**: 2026-01-17
+**Last Updated**: 2026-02-15
 
 ---
 
 ## Overview
 
-This document will describe the architecture of the FlowFuse AI Control Tower for managing distributed multi-agent Node-RED workflows. The Control Tower provides enterprise-grade fleet management, governance, and observability for the primitives developed in the main [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag) project.
+This document will describe the architecture of the RedForge AI Control Tower for managing distributed multi-agent Node-RED workflows. The Control Tower provides enterprise-grade fleet management, governance, and observability for the primitives developed in the main [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI) project.
 
 ---
 
@@ -127,7 +127,7 @@ The following architectural decisions will be documented during Phase 5:
 ## Related Documentation
 
 **Main Project**:
-- [nodered-ollama-milvus-rag Architecture](https://github.com/nagual69/nodered-ollama-milvus-rag/blob/main/docs/ARCHITECTURE.md)
+- [RedForge-Agentic-AI Architecture](https://github.com/nagual69/RedForge-Agentic-AI/blob/main/docs/ARCHITECTURE.md)
 - Main project describes Gen 1 (RAG) + Gen 2 (Multi-Agent) architecture
 
 **This Project**:

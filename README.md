@@ -1,7 +1,7 @@
-# FlowFuse AI Control Tower for Multi-Agent Node-RED Workflows
+# RedForge AI Control Tower for Multi-Agent Node-RED Workflows
 
 **Status:** 🚧 Planning Phase - NOT STARTED
-**Prerequisites:** Requires stable multi-agent RAG system from [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag)
+**Prerequisites:** Requires stable multi-agent RAG system from [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI)
 
 [![FlowFuse](https://img.shields.io/badge/FlowFuse-Ready-blue)](https://flowfuse.com/)
 [![Node-RED](https://img.shields.io/badge/Node--RED-4.1.2-red)](https://nodered.org/)
@@ -10,7 +10,7 @@
 
 ## Overview
 
-The **FlowFuse AI Control Tower** provides enterprise-grade fleet management and governance for distributed multi-agent Node-RED workflows. This project extends the [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag) system by deploying its composable primitives across a FlowFuse-managed infrastructure.
+The **RedForge AI Control Tower** provides enterprise-grade fleet management and governance for distributed multi-agent Node-RED workflows. This project extends the [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI) system by deploying its composable primitives across a FlowFuse-managed infrastructure.
 
 ### What This Project Adds
 
@@ -94,7 +94,7 @@ The FlowFuse Control Tower represents a **fundamentally different deployment arc
 ## Prerequisites
 
 ### Required Infrastructure
-- **Multi-Agent RAG System:** [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag) Phase 4 complete
+- **Multi-Agent RAG System:** [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI) Phase 4 complete
 - **FlowFuse Platform:** Cloud or self-hosted (v2.0+)
 - **PostgreSQL:** For FlowFuse metadata storage
 - **MQTT Broker:** For inter-instance communication (optional but recommended)
@@ -121,13 +121,13 @@ Before starting Phase 5, ensure you have:
 
 ## Relationship to Main Project
 
-**Main Project** ([nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag)):
+**Main Project** ([RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI)):
 - Gen 1: Production RAG pipeline ✅ Complete
 - Gen 2: Multi-agent architecture 🚧 In Progress (Phase 4)
 - Deployment: **Standalone Node-RED**
 
-**THIS Project** (nodered-flowfuse-control-tower):
-- Gen 3: FlowFuse Control Tower 📋 Planned (Phase 5-6)
+**THIS Project** (RedForge-AI-Control-Tower):
+- Gen 3: RedForge Control Tower 📋 Planned (Phase 5-6)
 - Deployment: **FlowFuse-managed fleet**
 - Builds upon: Gen 2 multi-agent primitives from main project
 
@@ -168,7 +168,7 @@ Before starting Phase 5, ensure you have:
 
 ## Contributing
 
-This project follows the same contribution guidelines as the main [nodered-ollama-milvus-rag](https://github.com/nagual69/nodered-ollama-milvus-rag) project.
+This project follows the same contribution guidelines as the main [RedForge-Agentic-AI](https://github.com/nagual69/RedForge-Agentic-AI) project.
 
 **Note:** This project is currently in the planning phase. Contributions will be welcome once Phase 5 begins (post-Phase 4 completion of main project).
 
@@ -182,8 +182,8 @@ MIT License - See LICENSE file for details
 
 ## Questions?
 
-- **Main Project Issues:** [nodered-ollama-milvus-rag/issues](https://github.com/nagual69/nodered-ollama-milvus-rag/issues)
-- **Control Tower Planning:** [This repo's issues](https://github.com/nagual69/nodered-flowfuse-control-tower/issues)
+- **Main Project Issues:** [RedForge-Agentic-AI/issues](https://github.com/nagual69/RedForge-Agentic-AI/issues)
+- **Control Tower Planning:** [This repo's issues](https://github.com/nagual69/RedForge-AI-Control-Tower/issues)
 - **FlowFuse Documentation:** [FlowFuse Docs](https://flowfuse.com/docs/)
 
 ---
